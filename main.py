@@ -1,4 +1,4 @@
-# ƒCƒ“ƒ|[ƒg‚·‚éƒ‰ƒCƒuƒ‰ƒŠ
+# ã‚¤ãƒ³ãƒãƒ¼ãƒˆã™ã‚‹ãƒ©ã‚¤ãƒ–ãƒ©ãƒª
 from flask import Flask, request, abort
 
 from linebot import (
@@ -12,13 +12,13 @@ from linebot.models import (
 )
 import os
 
-# Œy—Ê‚ÈƒEƒFƒuƒAƒvƒŠƒP[ƒVƒ‡ƒ“ƒtƒŒ[ƒ€ƒ[ƒN:Flask
+# è»½é‡ãªã‚¦ã‚§ãƒ–ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯:Flask
 app = Flask(__name__)
 
 
-#ŠÂ‹«•Ï”‚©‚çLINE Access Token‚ğİ’è
+#ç’°å¢ƒå¤‰æ•°ã‹ã‚‰LINE Access Tokenã‚’è¨­å®š
 LINE_CHANNEL_ACCESS_TOKEN = os.environ["LINE_CHANNEL_ACCESS_TOKEN"]
-#ŠÂ‹«•Ï”‚©‚çLINE Channel Secret‚ğİ’è
+#ç’°å¢ƒå¤‰æ•°ã‹ã‚‰LINE Channel Secretã‚’è¨­å®š
 LINE_CHANNEL_SECRET = os.environ["LINE_CHANNEL_SECRET"]
 
 line_bot_api = LineBotApi(LINE_CHANNEL_ACCESS_TOKEN)
@@ -46,7 +46,7 @@ def callback():
 def handle_message(event):
 	line_bot_api.reply_message(
         event.reply_token,
-        TextSendMessage(text='u' + event.message.text + 'v‚Á‚Ä‰½H')
+        TextSendMessage(text='ã€Œ' + event.message.text + 'ã€ã£ã¦ä½•ï¼Ÿ')
      )
 
 if __name__ == "__main__":
